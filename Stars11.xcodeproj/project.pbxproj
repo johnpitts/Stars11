@@ -13,6 +13,8 @@
 		FCBE7F39235629520083CB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE7F38235629520083CB81 /* Assets.xcassets */; };
 		FCBE7F3C235629520083CB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBE7F3A235629520083CB81 /* LaunchScreen.storyboard */; };
 		FCBE7F4423562DAC0083CB81 /* StarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE7F4323562DAC0083CB81 /* StarsTableViewCell.swift */; };
+		FCBE7F4623562FAE0083CB81 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE7F4523562FAE0083CB81 /* Star.swift */; };
+		FCBE7F4823562FE50083CB81 /* StarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE7F4723562FE50083CB81 /* StarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FCBE7F3B235629520083CB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCBE7F3D235629520083CB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBE7F4323562DAC0083CB81 /* StarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewCell.swift; sourceTree = "<group>"; };
+		FCBE7F4523562FAE0083CB81 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		FCBE7F4723562FE50083CB81 /* StarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				FCBE7F312356294F0083CB81 /* AppDelegate.swift */,
 				FCBE7F4323562DAC0083CB81 /* StarsTableViewCell.swift */,
 				FCBE7F332356294F0083CB81 /* StarsViewController.swift */,
+				FCBE7F4723562FE50083CB81 /* StarController.swift */,
+				FCBE7F4523562FAE0083CB81 /* Star.swift */,
 				FCBE7F352356294F0083CB81 /* Main.storyboard */,
 				FCBE7F38235629520083CB81 /* Assets.xcassets */,
 				FCBE7F3A235629520083CB81 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			files = (
 				FCBE7F342356294F0083CB81 /* StarsViewController.swift in Sources */,
 				FCBE7F4423562DAC0083CB81 /* StarsTableViewCell.swift in Sources */,
+				FCBE7F4823562FE50083CB81 /* StarController.swift in Sources */,
 				FCBE7F322356294F0083CB81 /* AppDelegate.swift in Sources */,
+				FCBE7F4623562FAE0083CB81 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
