@@ -21,10 +21,13 @@ class StarController {
     private var persistentURL: URL? {
         let fileManager = FileManager.default
         // documentsDirectory is sectioned off for each app, but ONLY the app. It's an array of directories, hence we need to use .first
+        
+        //  the documents directory for the app looks like this..... file:///Users/johnpitts/Library/Developer/CoreSimulator/Devices/4861BEEB-CBBE-4809-820C-0C3C84233F44/data/Containers/Data/Application/CA2AF033-F5ED-447E-BAE5-8B8FBF4D1DEF/Documents/
+        
         // .userDomainMask is a way to "filter it down"
         // must be unwrapped bc .first could be nil, it's asking for a url in an array of URLs
         guard let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        print(directory)
+
         return directory.appendingPathComponent("stars.plist")
     }
     
