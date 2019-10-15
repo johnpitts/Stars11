@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stars View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StarsViewController" customModule="Stars11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-Ny-zEg">
+                                <rect key="frame" x="-16" y="44" width="414" height="122"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-H0-nbt">
+                                        <rect key="frame" x="123" y="0.0" width="168.5" height="76"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Star Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfO-TE-s8M">
+                                                <rect key="frame" x="0.0" y="0.0" width="168.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance in Light Years" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-jC-tXn">
+                                                <rect key="frame" x="0.0" y="46" width="168.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fLj-jC-tXn" firstAttribute="leading" secondItem="fuc-H0-nbt" secondAttribute="leading" id="G9f-GE-tL0"/>
+                                            <constraint firstAttribute="trailing" secondItem="fLj-jC-tXn" secondAttribute="trailing" id="Jzg-XR-35g"/>
+                                            <constraint firstAttribute="trailing" secondItem="DfO-TE-s8M" secondAttribute="trailing" id="a48-NM-STf"/>
+                                            <constraint firstItem="DfO-TE-s8M" firstAttribute="leading" secondItem="fuc-H0-nbt" secondAttribute="leading" id="x0o-sk-Csc"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="2XT-rc-d2J">
+                                        <rect key="frame" x="75" y="92" width="264" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-GF-hvA">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                <state key="normal" title="Print Stars"/>
+                                                <connections>
+                                                    <action selector="printButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBi-wz-Tzz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0o-xq-NyL">
+                                                <rect key="frame" x="192" y="0.0" width="72" height="30"/>
+                                                <state key="normal" title="Create"/>
+                                                <connections>
+                                                    <action selector="createButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWI-Mi-t3d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-hq-Jud">
+                                <rect key="frame" x="0.0" y="166" width="414" height="696"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StarCell" id="tyv-Bo-r3V" customClass="StarsTableViewCell" customModule="Stars11" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tyv-Bo-r3V" id="jcW-Oi-Qsh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="1W2-De-BXG">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Star Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ku-yY-bO9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="81" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-xw-e7v" userLabel="distance in light years">
+                                                            <rect key="frame" x="0.0" y="23" width="42" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="1W2-De-BXG" secondAttribute="bottom" id="ROs-wX-LJf"/>
+                                                <constraint firstItem="1W2-De-BXG" firstAttribute="top" secondItem="jcW-Oi-Qsh" secondAttribute="top" id="c18-9r-EPG"/>
+                                                <constraint firstAttribute="trailing" secondItem="1W2-De-BXG" secondAttribute="trailing" constant="16" id="kza-7Q-Ucl"/>
+                                                <constraint firstItem="1W2-De-BXG" firstAttribute="leading" secondItem="jcW-Oi-Qsh" secondAttribute="leading" constant="16" id="oDg-A9-tDv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="DJG-xw-e7v" id="e5n-a8-qSX"/>
+                                            <outlet property="nameLabel" destination="6ku-yY-bO9" id="7bw-Ym-7WI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dhV-hq-Jud" secondAttribute="trailing" id="CUc-EP-vB9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dhV-hq-Jud" secondAttribute="bottom" id="ClS-M3-kzS"/>
+                            <constraint firstItem="dhV-hq-Jud" firstAttribute="top" secondItem="Mkf-Ny-zEg" secondAttribute="bottom" id="Gso-vd-NqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mkf-Ny-zEg" secondAttribute="trailing" constant="16" id="O6k-nI-WBN"/>
+                            <constraint firstItem="Mkf-Ny-zEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-16" id="Opb-Fk-EDg"/>
+                            <constraint firstItem="Mkf-Ny-zEg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bCD-lR-Yz5"/>
+                            <constraint firstItem="dhV-hq-Jud" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nB8-wB-ykf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="distanceTextField" destination="fLj-jC-tXn" id="9ci-Yw-ft1"/>
+                        <outlet property="nameTextField" destination="DfO-TE-s8M" id="vyK-WX-LbV"/>
+                        <outlet property="tableView" destination="dhV-hq-Jud" id="zhf-fY-7tW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
