@@ -61,16 +61,32 @@
 			isa = PBXGroup;
 			children = (
 				FCBE7F312356294F0083CB81 /* AppDelegate.swift */,
-				FCBE7F4323562DAC0083CB81 /* StarsTableViewCell.swift */,
-				FCBE7F332356294F0083CB81 /* StarsViewController.swift */,
-				FCBE7F4723562FE50083CB81 /* StarController.swift */,
-				FCBE7F4523562FAE0083CB81 /* Star.swift */,
-				FCBE7F352356294F0083CB81 /* Main.storyboard */,
+				FCBE7F49235630C60083CB81 /* Views */,
+				FCBE7F4A235630D50083CB81 /* Model */,
 				FCBE7F38235629520083CB81 /* Assets.xcassets */,
+				FCBE7F352356294F0083CB81 /* Main.storyboard */,
 				FCBE7F3A235629520083CB81 /* LaunchScreen.storyboard */,
 				FCBE7F3D235629520083CB81 /* Info.plist */,
 			);
 			path = Stars11;
+			sourceTree = "<group>";
+		};
+		FCBE7F49235630C60083CB81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE7F4323562DAC0083CB81 /* StarsTableViewCell.swift */,
+				FCBE7F332356294F0083CB81 /* StarsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCBE7F4A235630D50083CB81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE7F4723562FE50083CB81 /* StarController.swift */,
+				FCBE7F4523562FAE0083CB81 /* Star.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
