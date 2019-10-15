@@ -9,9 +9,13 @@
 import Foundation
 
 
-struct Star {
+struct Star: Codable {
     
     let name: String
     let distance: Double
+    
+    var distanceDescription: String {
+        return "\(distance) light years away"
+    }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarsViewController: UIViewController {
+class StarsViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -17,14 +17,21 @@ class StarsViewController: UIViewController {
     var starController = StarController()
     
 
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self      // you can also drag this in like an outlet which we did last week
+        tableView.delegate = self
+        starController.loadFromPersitentStore()
     }
 
     @IBAction func printButtonTapped(_ sender: Any) {
-        
+        print(starController.listStars())
     }
+    
+
     
     
     @IBAction func createButtonTapped(_ sender: Any) {
